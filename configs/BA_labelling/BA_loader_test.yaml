@@ -1,0 +1,27 @@
+dataset:
+  type: CoupledCamera
+  source_file: /media/iaslab/data_bacchin/cosmari/cosmari_e1_2025-07-16/ecobot1_2025-07-16_static_coupling.json
+  cameras: ["basler", "ob_color"]
+  groups: ["1", "2"]
+  start_datetime: "2025-07-16T00:00:00"
+  end_datetime: "2025-07-16T23:59:59"
+
+run_settings:
+  out_dir: /media/iaslab/data_bacchin/cosmari/cosmari_e1_2025-07-16/
+  save_images: false
+  debug: true
+  debug_iters: 25
+  target_class_for_BA: removed #label assigned to the detections
+
+#information about class labels
+class_info:
+  0:
+    name: background
+    color: [0, 0, 0]
+    keep: true
+  1:
+    name: removed
+    color: [255, 255, 0]
+    keep: true
+
+#other useful info

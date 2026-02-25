@@ -1,0 +1,18 @@
+[workspace]
+authors = ["Bacchin Alberto <bacchinalb@dei.unipd.it>"]
+channels = ["pytorch", "nvidia", "conda-forge"]
+name = "Auto-Labelling"
+platforms = ["linux-64", "win-64"]
+version = "0.1.0"
+
+[system-requirements]
+cuda = "12.8"
+
+[dependencies]
+python = ">=3.14"
+#pixi-pycharm = ">=0.0.10,<0.0.11" #for conda env, we are just using python interpreter directly
+
+[pypi-dependencies]
+torch = { version = "==2.9.1", index = "https://download.pytorch.org/whl/cu128" }
+torchvision = { version = "==0.24.1", index = "https://download.pytorch.org/whl/cu128" }
+
